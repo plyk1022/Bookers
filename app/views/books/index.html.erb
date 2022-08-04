@@ -15,6 +15,7 @@
       <tr>
         <td><%= book.title %></td>
         <td><%= book.body %></td>
+        <td colspan="3"></td>
         <td><%= link_to 'Show', book_path(book.id) %></td>
         <td><%= link_to 'Edit', edit_book_path(book.id) %></td>
         <td><%= link_to 'Destroy', book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %></td>
@@ -24,7 +25,7 @@
 
 </table>
 
-<h1>New book</h1>
+<h2>New book</h2>
 
 <% if @book.errors.any? %>
   <ul>
@@ -35,12 +36,18 @@
 <% end %>
 
 <%= form_with model: @book do |f| %>
-  <h4>Title</h4>
-  <%= f.text_field :title %>
-
-  <h4>Body</h4>
-  <%= f.text_area :body %>
-
-  <%= f.submit 'Create Book' %>
+  <div class="field">
+    <h4>Title</h4>
+    <%= f.text_field :title %>
+  </div>
+  
+  <div class="field">
+    <h4>Body</h4>
+    <%= f.text_area :body %>
+  </div>
+  
+  <div class="submit-btn">
+    <%= f.submit 'Create Book' %>
+  </div>
 
 <% end %>

@@ -9,18 +9,27 @@
 <% end %>
 
 <%= form_with model: @book do |f| %>
-  <h4>Titile</h4>
-  <%= f.text_field :title %>
+  <div class="field">
+    <h4>Title</h4>
+    <div class="title-field">
+    <%= f.text_field :title %>
+    </div>
+  </div>
   
-  <h4>Body</h4>
-  <%= f.text_area :body %>
+  <div class="field">
+    <h4>Body</h4>
+    <%= f.text_area :body %>
+  </div>
   
-  <%= f.submit 'Update Book' %>
+  <div class="submit-btn">
+    <%= f.submit 'Update Book' %>
+  </div>
   
-  <%= link_to 'Show', book_path(@book.id) %>
-  |
-  <%= link_to 'Back', books_path %>
-  
+  <div class="link">
+    <%= link_to 'Show', book_path(@book.id) %>
+    |
+    <%= link_to 'Back', books_path %>
+  </div>
   
   
 <% end %>
