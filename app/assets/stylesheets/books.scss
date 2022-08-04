@@ -22,7 +22,13 @@ table {
 }
 
 td {
-  margin: 0;
+    padding-bottom: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+th {
+  padding-bottom: 5px;
 }
 
 .link {
@@ -66,8 +72,4 @@ input {
 
 textarea {
   padding: 2px;
-}
-
-Show {
-  color: #000000;
 }
