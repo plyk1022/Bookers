@@ -1,3 +1,5 @@
+
+
 <h1>Books</h1>
 
 <table>
@@ -23,6 +25,14 @@
 </table>
 
 <h1>New book</h1>
+
+<% if @book.errors.any? %>
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
 
 <%= form_with model: @book do |f| %>
   <h4>Title</h4>
