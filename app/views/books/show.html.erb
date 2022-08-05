@@ -1,6 +1,10 @@
+<div class="book-content">
+  <strong>Title: </strong><%= @book.title %>
+</div>
 
-<p><strong>Title: </strong><%= @book.title %></p>
-<p><strong>Body: </strong><%= @book.body %></p>
+<div class="book-content">
+  <strong>Body: </strong><%= @book.body %>
+</div>
 
 <%= link_to 'Edit', edit_book_path(@book.id) %>
 |
